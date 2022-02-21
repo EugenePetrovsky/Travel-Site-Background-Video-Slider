@@ -26,13 +26,33 @@
 </header>
 
 <section class="home">
-    <video class="video-slide" src="/1.mp4" autoplay muted loop></video>
+    <video class="video-slide active" src="/1.mp4" autoplay muted loop></video>
     <video class="video-slide" src="/2.mp4" autoplay muted loop></video>
     <video class="video-slide" src="/3.mp4" autoplay muted loop></video>
     <video class="video-slide" src="/4.mp4" autoplay muted loop></video>
     <video class="video-slide" src="/5.mp4" autoplay muted loop></video>
     <div class="content">
         <h1>Wonderful.<br><span>Island</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, delectus illum culpa neque assumenda vero eligendi eos voluptatum dolorum ipsam dicta voluptate laborum ad fugit accusantium temporibus necessitatibus nam! Soluta, similique. Quae reprehenderit eos porro nulla tempora officia laborum recusandae deleniti a perferendis quam, ipsam deserunt aperiam doloribus quisquam minus voluptatum ut facere minima blanditiis temporibus. Earum dolores dolor autem culpa eum odit tempora consequuntur nulla molestiae repellat quae, eaque, veniam laboriosam, natus cupiditate adipisci sequi! Qui soluta odit repellat.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Camping.<br><span>Enjoy</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, delectus illum culpa neque assumenda vero eligendi eos voluptatum dolorum ipsam dicta voluptate laborum ad fugit accusantium temporibus necessitatibus nam! Soluta, similique. Quae reprehenderit eos porro nulla tempora officia laborum recusandae deleniti a perferendis quam, ipsam deserunt aperiam doloribus quisquam minus voluptatum ut facere minima blanditiis temporibus. Earum dolores dolor autem culpa eum odit tempora consequuntur nulla molestiae repellat quae, eaque, veniam laboriosam, natus cupiditate adipisci sequi! Qui soluta odit repellat.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Adventures.<br><span>Offroad</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, delectus illum culpa neque assumenda vero eligendi eos voluptatum dolorum ipsam dicta voluptate laborum ad fugit accusantium temporibus necessitatibus nam! Soluta, similique. Quae reprehenderit eos porro nulla tempora officia laborum recusandae deleniti a perferendis quam, ipsam deserunt aperiam doloribus quisquam minus voluptatum ut facere minima blanditiis temporibus. Earum dolores dolor autem culpa eum odit tempora consequuntur nulla molestiae repellat quae, eaque, veniam laboriosam, natus cupiditate adipisci sequi! Qui soluta odit repellat.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Road Trip.<br><span>Together</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, delectus illum culpa neque assumenda vero eligendi eos voluptatum dolorum ipsam dicta voluptate laborum ad fugit accusantium temporibus necessitatibus nam! Soluta, similique. Quae reprehenderit eos porro nulla tempora officia laborum recusandae deleniti a perferendis quam, ipsam deserunt aperiam doloribus quisquam minus voluptatum ut facere minima blanditiis temporibus. Earum dolores dolor autem culpa eum odit tempora consequuntur nulla molestiae repellat quae, eaque, veniam laboriosam, natus cupiditate adipisci sequi! Qui soluta odit repellat.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+        <h1>Feel Nature.<br><span>Relax</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, delectus illum culpa neque assumenda vero eligendi eos voluptatum dolorum ipsam dicta voluptate laborum ad fugit accusantium temporibus necessitatibus nam! Soluta, similique. Quae reprehenderit eos porro nulla tempora officia laborum recusandae deleniti a perferendis quam, ipsam deserunt aperiam doloribus quisquam minus voluptatum ut facere minima blanditiis temporibus. Earum dolores dolor autem culpa eum odit tempora consequuntur nulla molestiae repellat quae, eaque, veniam laboriosam, natus cupiditate adipisci sequi! Qui soluta odit repellat.</p>
         <a href="#">Read More</a>
     </div>
@@ -62,6 +82,7 @@ menuBtn.addEventListener("click", () => {
 //Javascript for video slider navigation
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
+const contents = document.querySelectorAll(".content");
 
 var sliderNav = function(manual){
     btns.forEach((btn) => {
@@ -72,8 +93,13 @@ var sliderNav = function(manual){
         slide.classList.remove("active");
     });
 
+    contents.forEach((content) => {
+        content.classList.remove("active");
+    });
+
     btns[manual].classList.add("active");
     slides[manual].classList.add("active");
+    contents[manual].classList.add("active");
 }
 
 btns.forEach((btn, i) => {
