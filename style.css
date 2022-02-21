@@ -93,7 +93,7 @@ section {
 
 .home .content h1 {
     font-size: 4em;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
     line-height: 75px;
@@ -102,7 +102,7 @@ section {
 
 .home .content h1 span {
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .home .content p {
@@ -247,6 +247,15 @@ section {
         align-items: center;
         border-radius: 5px;
         box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+
+    .home .content h1 {
+        font-size: 3em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height: 1.4;
+        margin-bottom: 20px;
     }
 
     .menu-btn {
