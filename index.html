@@ -127,8 +127,8 @@ btns.forEach((btn, i) => {
 btns.forEach((btn, i) => {
     btn.addEventListener("touchend", i => {
         touchendX = i.changedTouches[0].screenX;
-        handleGesture();
         sliderNav(i);
+        handleGesture();
     });
 });
 
