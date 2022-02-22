@@ -118,15 +118,15 @@ btns.forEach((btn, i) => {
     });
 });
 
-btns.forEach((btn, i) => {
-    btn.addEventListener("touchstart", i => {
-        touchstartX = i.changedTouches[0].screenX;
+btns.forEach((btn, e) => {
+    btn.addEventListener("touchstart", e => {
+        touchstartX = e.changedTouches[0].screenX;
     });
 });
 
-btns.forEach((btn, i) => {
-    btn.addEventListener("touchend", i => {
-        touchendX = i.changedTouches[0].screenX;
+btns.forEach((btn, e) => {
+    btn.addEventListener("touchend", e => {
+        touchendX = e.changedTouches[0].screenX;
         sliderNav(i);
         handleGesture();
     });
