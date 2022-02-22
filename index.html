@@ -81,9 +81,18 @@ menuBtn.addEventListener("click", () => {
     navigation.classList.toggle("active");
 });
 //Javascript for video slider navigation
+let touchstartX = 0
+let touchendX = 0
+
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".content");
+
+function handleGesture() {
+    if (touchendX < touchstartX) alert('swiped left!')
+    if (touchendX > touchstartX) alert('swiped right!')
+}
+
 
 var sliderNav = function(manual){
     btns.forEach((btn) => {
@@ -108,6 +117,20 @@ btns.forEach((btn, i) => {
         sliderNav(i);
     });
 });
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("touchstart", e => {
+        touchstartX = e.changedTouches[0].screenX
+    });
+});
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("touchend", e => {
+        touchendX = e.changedTouches[0].screenX
+        handleGesture()
+    });
+});
+
 </script>
 
 </body>
